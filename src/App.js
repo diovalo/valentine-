@@ -7,6 +7,7 @@ import EndPage from './components/EndPage';
 import Ask from './components/Ask';
 import Envelope from './components/Envelope'; 
 import Destroy from './components/Destroy';
+import 'antd/dist/reset.css';  // for antd v5
 import {
   BrowserRouter as Router,
   Routes,

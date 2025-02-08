@@ -50,23 +50,37 @@ export default function FrontPage() {
                     isClickToPauseDisabled={true}
                 />
             </div>
-            <div className="heart opacity-75">
-                <div className="text absolute -top-4 z-10 w-72 p-3 h-auto flex flex-col rotate-45 select-none">
-                    <p className='w-fit h-fit text-font text-center custom-color-text'>
-                        In the midst of life's tumultuous sea,
-                    </p>
-                    <p className='w-fit h-fit text-font text-center custom-color-text'>
-                        Amidst chaos and uncertainty,
-                    </p>
-                    <p className='w-fit h-fit text-font text-center custom-color-text'>
-                        I found my anchor, my guiding light,
-                    </p>
-                    <p className='w-fit h-fit text-font text-center custom-color-text'>
-                        In your love, serene and bright.
-                    </p>
-                </div>
-                <div className="autor text-author absolute bottom-8 left-10 rotate-45">
-                    ~ Dhawal
+            <div className="heart opacity-75 relative">
+                <div className="heart-content absolute w-full h-full flex flex-col justify-center items-center">
+                    <div className="poem-text rotate-45 flex flex-col items-center justify-center w-full h-full">
+                        <div className="text-wrapper">
+                            <p className='text-font custom-color-text'>
+                                In the midst of life's
+                            </p>
+                            <p className='text-font custom-color-text'>
+                                tumultuous sea,
+                            </p>
+                            <p className='text-font custom-color-text'>
+                                Amidst chaos and
+                            </p>
+                            <p className='text-font custom-color-text'>
+                                uncertainty,
+                            </p>
+                            <p className='text-font custom-color-text'>
+                                I found my anchor,
+                            </p>
+                            <p className='text-font custom-color-text'>
+                                my guiding light,
+                            </p>
+                            <p className='text-font custom-color-text'>
+                                In your love,
+                            </p>
+                            <p className='text-font custom-color-text'>
+                                serene and bright.
+                            </p>
+                            <p className='text-author mt-2 text-white'>~ Dhawal</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="content-ask text-white z-10 flex flex-col flex-wrap gap-6 justify-center items-center">

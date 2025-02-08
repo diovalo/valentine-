@@ -38,13 +38,17 @@
 
 .text-font {
     font-family: Affectionately, 'Courier New', Courier, monospace;
-    @apply font-bold text-xl;
+    @apply font-bold text-sm; /* Reduced font size */
     letter-spacing: 0.015rem;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
 }
 
 .text-author {
     font-family: LoveDays, 'Courier New', Courier, monospace;
-    @apply font-bold text-lg;
+    @apply font-bold text-sm;
+    margin-top: 8px;
     color: #ffffff;
 }
 
@@ -56,13 +60,31 @@
 .heart {
     height: 200px;
     width: 200px;
-    background-color: #cc2b5e ;
+    background-color: #cc2b5e;
     position: relative;
     transform: rotate(-45deg);
     box-shadow: -20px 20px 50px #fdd107;
     animation: heart-animation 2s linear infinite;
 }
 
+.heart-content {
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.poem-text {
+    transform: rotate(45deg);
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-wrapper {
+    text-align: center;
+    transform: scale(0.8); /* Adjust this value to fit text better */
+}
 
 @keyframes heart-animation {
     0% {
@@ -90,7 +112,6 @@
         box-shadow: -20px 20px 50px #fdd107;
     }
 }
-
 
 .heart:before {
     content: '';
