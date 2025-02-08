@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'Affectionately';
+    src: local('Affectionately') , url('./Fonts/Affectionately\ Yours\ -\ TTF.ttf');
+}
+
+@font-face {
+    font-family: 'LoveDays';
+    src: local('LoveDays') , url('./Fonts/LoveDays-2v7Oe.ttf');
+}
+
+@font-face {
+    font-family: 'CarryYou';
+    src: local('CarryYou') , url('./Fonts/CarryYouRegular-3z71M.ttf');
+}
+
+@font-face {
+    font-family: 'Dagger';
+    src: local('Dagger') , url('./Fonts/DAGGERSQUARE.otf');
+}
+
+.button-text{
+    font-family: Dagger, 'Courier New', Courier, monospace;
+    @apply font-bold;
+    letter-spacing: 0.015rem;
+}
+
+.typing-text {
+    font-family: Dagger, 'Courier New', Courier, monospace;
+    @apply font-bold;
+    letter-spacing: 0.015rem;
+
+}
+
+.text-font {
+    font-family: Affectionately, 'Courier New', Courier, monospace;
+    @apply font-bold text-xl;
+    letter-spacing: 0.015rem;
+}
+
+.text-author {
+    font-family: LoveDays, 'Courier New', Courier, monospace;
+    @apply font-bold text-lg;
+    color: #ffffff;
+}
+
+.custom-color-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-br from-[#fdd107] to-[#fdf05d];
+}
+
+
+.heart {
+    height: 200px;
+    width: 200px;
+    background-color: #cc2b5e ;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -20px 20px 50px #fdd107;
+    animation: heart-animation 2s linear infinite;
+}
+
+
+@keyframes heart-animation {
+    0% {
+        transform: rotate(-45deg) scale(1);
+        box-shadow: -20px 20px 50px #fdd107;
+    }
+
+    25% {
+        transform: rotate(-50deg) scale(1.1);
+        box-shadow: -25px 25px 50px #fdd107;
+    }
+
+    50% {
+        transform: rotate(-45deg) scale(1);
+        box-shadow: -20px 20px 50px #cca808;
+    }
+
+    75% {
+        transform: rotate(-40deg) scale(1.1);
+        box-shadow: -25px 25px 50px #fdd107;
+    }
+
+    100% {
+        transform: rotate(-45deg) scale(1);
+        box-shadow: -20px 20px 50px #fdd107;
+    }
+}
+
+
+.heart:before {
+    content: '';
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-color: #cc2b5e;
+    top: -50%;
+    border-radius: 50%;
+    box-shadow: 15px -20px 50px #ffd000;
+}
+
+.heart:after {
+    content: '';
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-color: #cc2b5e;
+    right: -50%;
+    border-radius: 50%;
+    box-shadow: 30px -10px 50px #ffd000;
+}
