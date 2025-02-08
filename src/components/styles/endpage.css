@@ -30,3 +30,124 @@
     }
     
 }
+
+/* endpage.css */
+.note-for-crush {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .video-container {
+    position: relative;
+    width: 400px; /* Base width for desktop */
+    height: 225px; /* 16:9 aspect ratio */
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: perspective(1000px) rotateX(2deg);
+    background: white;
+    padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .video-container:hover {
+    transform: perspective(1000px) rotateX(2deg) scale(1.02);
+  }
+  
+  .react-player {
+    position: absolute !important;
+    top: 8px !important;
+    left: 8px !important;
+    right: 8px !important;
+    bottom: 8px !important;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .loading-spinner-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+  
+  .loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  .loading-text {
+    margin-top: 10px;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Button styling */
+  .button {
+    margin-top: 20px;
+  }
+  
+  .button-chat-font {
+    transition: all 0.3s ease;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .video-container {
+      width: 320px; /* Smaller width for mobile */
+      height: 180px; /* Maintaining 16:9 aspect ratio */
+      padding: 6px;
+    }
+    
+    .react-player {
+      top: 6px !important;
+      left: 6px !important;
+      right: 6px !important;
+      bottom: 6px !important;
+    }
+  
+    .button-chat-font {
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+  
+  /* Additional responsive adjustments for larger screens */
+  @media (min-width: 1024px) {
+    .video-container {
+      width: 480px;
+      height: 270px;
+    }
+  }
+  
+  /* Optional: Add smooth transitions for all animations */
+  * {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Maintain aspect ratio for video container */
+  .video-container::before {
+    content: '';
+    display: block;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  }
